@@ -1,0 +1,45 @@
+{
+	"name": "bueltge/wordpress-admin-style",
+	"description": "Shows the WordPress admin styles on one page to help you to develop WordPress compliant",
+	"license": "GPL-2.0-or-later",
+	"type": "wordpress-plugin",
+	"homepage": "https://github.com/bueltge/wordpress-admin-style",
+	"authors": [
+		{
+			"name": "Inpsyde GmbH",
+			"homepage": "https://inpsyde.com",
+			"email": "info@inpsyde.com",
+			"role": "Company"
+		},
+		{
+			"name": "Frank Bültge",
+			"homepage": "https://bueltge.de",
+			"email": "frank@bueltge.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">5.2.4"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"squizlabs/php_codesniffer": "^3",
+		"wp-coding-standards/wpcs": "*"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"cs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+		"csf": "@php ./vendor/bin/phpcbf",
+		"pu": "@php ./vendor/bin/phpunit",
+		"qa": [
+			"@cs",
+			"@pu"
+		]
+	}
+}
